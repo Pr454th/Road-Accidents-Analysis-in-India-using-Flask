@@ -1,5 +1,7 @@
 from flask import Flask
-
+import os
+import sys
+sys.path.insert(0, os.getcwd()+"/modules")
 
 def create_app(test_config=None):
     fapp = Flask(__name__)
