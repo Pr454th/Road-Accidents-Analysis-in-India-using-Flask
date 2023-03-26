@@ -62,12 +62,12 @@ Y2017_death_data.drop(columns="Sl. No.",inplace=True)
 Y2017_cols=Y2017_death_data.columns
 Y2018_cols=Y2018_death_data.columns
 Y2019_cols=Y2019_death_data.columns
-print("2019 intersection 2017",len(Y2019_cols.intersection(Y2017_cols)))
-print("2019 intersection 2018",len(Y2019_cols.intersection(Y2018_cols)))
-print("2018 intersection 2017",len(Y2018_cols.intersection(Y2017_cols)))
-print("2019 difference 2017",len(Y2019_cols.difference(Y2017_cols)))
-print("2019 difference 2018",len(Y2019_cols.difference(Y2018_cols)))
-print("2018 difference 2017",len(Y2018_cols.difference(Y2017_cols)))
+# print("2019 intersection 2017",len(Y2019_cols.intersection(Y2017_cols)))
+# print("2019 intersection 2018",len(Y2019_cols.intersection(Y2018_cols)))
+# print("2018 intersection 2017",len(Y2018_cols.intersection(Y2017_cols)))
+# print("2019 difference 2017",len(Y2019_cols.difference(Y2017_cols)))
+# print("2019 difference 2018",len(Y2019_cols.difference(Y2018_cols)))
+# print("2018 difference 2017",len(Y2018_cols.difference(Y2017_cols)))
 
 def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_2019,Cause_2018,Cause_2017,Mode_2019,Mode_2018,Mode_2017,two_wheel_combined,time_3_yrs):
     #Create a new dataframes with states and UT data of 2019,2018,2017
