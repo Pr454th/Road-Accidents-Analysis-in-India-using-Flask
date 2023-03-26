@@ -4,12 +4,21 @@ import pandas as pd
 bp = Blueprint('app', __name__)
 
 accidents_raw = pd.read_csv('app/only_road_accidents_data_month2.xls')
-data.master_dataframe(accidents_raw)
-data.barchart(accidents_raw)
-data.stacked_barchart(accidents_raw)
-data.grouped_barchart(accidents_raw)
-data.union_territories(accidents_raw)
-data.piechart(accidents_raw)
+
+Y2019_death_data=pd.read_csv("app/Datasets/StateUT City Place of Occurrence-2019.xls")
+Y2018_death_data=pd.read_csv("app/Datasets/StateUTCity andPlace2018.xls")
+Y2017_death_data=pd.read_csv("app/Datasets/StateUTCityPlace-deaths-2017.xls")
+drunk_data=pd.read_csv("app/Datasets/Drunk cases.xls")
+Cause_2019=pd.read_csv("app/Datasets/Cause-wise Distribution2019.xls")
+Cause_2018=pd.read_csv("app/Datasets/Cause-wise-2018.xls")
+Cause_2017=pd.read_csv("app/Datasets/Cause-wise-2017.xls")
+Mode_2019=pd.read_csv("app/Datasets/Mode-2019.xls")
+Mode_2018=pd.read_csv("app/Datasets/Mode-2018.xls")
+Mode_2017=pd.read_csv("app/Datasets/Mode-2017.xls")
+two_wheel_combined=pd.read_csv("app/Datasets/two_wheeler Victims Combined.xls")
+time_3_yrs=pd.read_csv("app/Datasets/Time of Occurrence-3 years.xls")
+
+data.main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_2019,Cause_2018,Cause_2017,Mode_2019,Mode_2018,Mode_2017,two_wheel_combined,time_3_yrs)
 
 @bp.route('/')
 def home():
