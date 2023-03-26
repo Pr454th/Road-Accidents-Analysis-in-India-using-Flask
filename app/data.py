@@ -118,7 +118,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     plt.xlabel("Year",fontsize=15)
     plt.ylim(140000, 156000)
     resolution_value = 150
-    plt.savefig("app/static/images/YearVsDeathCount.png",dpi=resolution_value)
+    plt.savefig("app/static/images/YearVsDeathCount.png",dpi=resolution_value,bbox_inches='tight')
 
     """**Above graph clearly shows that the deaths due to road accidents has only increased in India from 2017-2019.**
 
@@ -161,7 +161,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     plt.ylabel("Death Count",fontsize=12)
     plt.xlabel("Year",fontsize=12)
     resolution_value = 150
-    plt.savefig("app/static/images/YearVsDeathCountBasedOnGender.png",dpi=resolution_value)
+    plt.savefig("app/static/images/YearVsDeathCountBasedOnGender.png",dpi=resolution_value,bbox_inches='tight')
 
     """**Data also shows that the majority of the adult victims from the fatal road accidents are Males.**
 
@@ -212,7 +212,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     sns.barplot(ax=axes[2], x='Year', y='Death Count',hue='State/UT/City',data=ut_2017_top5,palette='Spectral')
 
     resolution_value = 150
-    plt.savefig("app/static/images/UTs with Highest Death Rate-Yearly Analysis.png",dpi=resolution_value)
+    plt.savefig("app/static/images/UTs with Highest Death Rate-Yearly Analysis.png",dpi=resolution_value,bbox_inches='tight')
 
     #Create a new dataframes with City data of 2019,2018,2017
     City_2019=Y2019_death_data[(Y2019_death_data["Category"]=='City')]
@@ -248,7 +248,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     sns.barplot(ax=axes[0], x='Year', y='Death Count',hue='State/UT/City',data=City_2017_top5,palette='Spectral')
 
     resolution_value = 150
-    plt.savefig("app/static/images/city.png",dpi=resolution_value)
+    plt.savefig("app/static/images/city.png",dpi=resolution_value,bbox_inches='tight')
 
     """**State wise analysis of data shows that Uttar Pradesh reported the highest accident deaths in the country  and among the union territories Delhi reported highest death count. Among the cities in the country Delhi always topped the list in the number of road accident deaths.**"""
 
@@ -295,7 +295,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     autopct='%1.1f%%', shadow=True, startangle=140)
     plt.axis('equal')
     resolution_value = 150
-    plt.savefig("app/static/images/area_2019.png", dpi=resolution_value)
+    plt.savefig("app/static/images/area_2019.png", dpi=resolution_value, bbox_inches='tight')
 
     plt.figure(figsize=(15,6))
     # Data to plot
@@ -310,7 +310,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     autopct='%1.1f%%', shadow=True, startangle=140)
     plt.axis('equal')
     resolution_value = 150
-    plt.savefig("app/static/images/area_2018.png", dpi=resolution_value)
+    plt.savefig("app/static/images/area_2018.png", dpi=resolution_value, bbox_inches='tight')
 
     plt.figure(figsize=(15,6))
     # Data to plot
@@ -325,7 +325,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     autopct='%1.1f%%', shadow=True, startangle=140)
     plt.axis('equal')
     resolution_value = 150
-    plt.savefig("app/static/images/area.png", dpi=resolution_value)
+    plt.savefig("app/static/images/area.png", dpi=resolution_value , bbox_inches='tight')
 
     """**The above graphs shows that during all the three years a very high number of accidental deaths were reported in Residential Areas.**
 
@@ -360,7 +360,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     sns.barplot(data=Cause_combined,x='Cause',hue='Year',y='Total Deaths',palette='Oranges')
     plt.xticks(rotation='vertical')
     resolution_value = 150
-    plt.savefig("app/static/images/Cause_wise.png", dpi=resolution_value)
+    plt.savefig("app/static/images/Cause_wise.png", dpi=resolution_value, bbox_inches='tight')
 
     """**The maximum number of accidents in the country occured due to over speeding and dangerous/careless  driving.**
 
@@ -390,7 +390,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     plt.title("Drunk and Drive Accident Cases Accross States in India",fontsize=20)
     sns.barplot(data=drunk_combined,x='State',hue='Year',y='Accident-Count',palette='Blues')
     plt.xticks(rotation='vertical')
-    plt.savefig("app/static/images/drunk.png", dpi=resolution_value)
+    plt.savefig("app/static/images/drunk.png", dpi=resolution_value, bbox_inches='tight')
     drunk_data_ut=drunk_data.iloc[29:36]
     drunk_ut_2019=drunk_data_ut.loc[:,['State/UT-wise','State/UT-Wise Total Number of Road Accidents due to Drunken Driving/ Consumption of alcohol during - 2019']]
     drunk_ut_2018=drunk_data_ut.loc[:,['State/UT-wise','State/UT-Wise Total Number of Road Accidents due to Drunken Driving/ Consumption of alcohol during - 2018']]
@@ -412,7 +412,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     sns.barplot(data=drunk_ut_combined,x='UT',hue='Year',y='Accident-Count',palette='Blues')
     plt.xticks(rotation='vertical')
     resolution_value = 150
-    plt.savefig("app/static/images/Drunk_and_Drive_Accident_Cases_Accross_UTs_in_India.png", dpi=resolution_value)
+    plt.savefig("app/static/images/Drunk_and_Drive_Accident_Cases_Accross_UTs_in_India.png", dpi=resolution_value, bbox_inches='tight')
 
     """**Above figures shows that highest number of accidents due to drinking and driving was reported from Uttar pradesh in the States category and from Delhi in Union Territory category.**
 
@@ -431,7 +431,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     sns.barplot(data=Mode_combined,x='Mode of Transport',hue='Year',y='Total Persons Died',palette='Greens')
     plt.xticks(rotation='vertical')
     resolution_value = 150
-    plt.savefig("app/static/images/Mode_combined.png", dpi=resolution_value)
+    plt.savefig("app/static/images/Mode_combined.png", dpi=resolution_value,bbox_inches='tight')
 
     """**Data shows that two-wheelers has caused highest number of accidents in the country and it has only increased over 3 years.**"""
 
@@ -446,7 +446,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     plt.ylabel("Deaths",fontsize=15)
     plt.xticks(rotation='vertical')
     resolution_value = 150
-    plt.savefig("app/static/images/two_wheel_states.png", dpi=resolution_value)
+    plt.savefig("app/static/images/two_wheel_states.png", dpi=resolution_value,bbox_inches='tight')
 
     plt.figure(figsize=(8,6))
     plt.title("Two-wheeler deaths accross  UTs in 3 Years",fontsize=12)
@@ -455,7 +455,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     plt.ylabel("Deaths",fontsize=15)
     plt.xticks(rotation='vertical')
     resolution_value = 150
-    plt.savefig("app/static/images/two_wheel_ut.png", dpi=resolution_value)
+    plt.savefig("app/static/images/two_wheel_ut.png", dpi=resolution_value,bbox_inches='tight')
 
     """**Highest number of two-wheeler accidents were reported from Uttar Pradesh in the States category and from Delhi in the UT Category**"""
 
@@ -464,7 +464,7 @@ def main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_201
     sns.lineplot(x='Time Of Occurance',y='Accident Count', hue='Year',data=time_3_yrs,palette='bright')
     plt.xticks(rotation='vertical')
     resolution_value = 150
-    plt.savefig("app/static/images/time_of_occurence.png", dpi=resolution_value)
+    plt.savefig("app/static/images/time_of_occurence.png", dpi=resolution_value,bbox_inches='tight')
 
     """**Time of occurence data shows that maximum number of accidents in the country were reported between 6:00 PM and 9:00 PM.**
 

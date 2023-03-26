@@ -1,39 +1,37 @@
 {% extends 'base.html' %} {% block title %}Analytics{% endblock %} {% block
 dataset_info %}
-<div class="row mt-2 mb-2 d-flex mx-auto">
-  <div class="card col-6">
-    <img src="../static/images/area.png" alt="" class="img-fluid" />
-  </div>
-  <div class="col-6"></div>
-</div>
-<div class="row mt-2 mb-2 d-flex mx-auto">
-  <h1 class="display-2">Accidents</h1>
-  <div class="card col-6">
-    <img src="../static/images/area_2018.png" alt="" class="img-fluid" />
-  </div>
-  <div class="col-6">
-    <i class="fa fa-forward"></i>
-    <span class="lead">
-      In this code, the fas class specifies that we're using a "solid" style
-      icon, and the fa-thumbs-up class specifies which specific icon to use. You
-      can find a full list of available icons and their class names on the
-      FontAwesome website.
-    </span>
-  </div>
-</div>
+<h1 class="display-1">Road Accident Analysis in India</h1>
 <div class="card row mt-2 mb-2 d-flex mx-auto">
+  <p class="lead">
+    The Below graphs shows that during all the three years a very high number of
+    accidental deaths were reported in Residential Areas.
+  </p>
+  <img src="../static/images/area.png" alt="" class="img-fluid" />
+  <img src="../static/images/area_2018.png" alt="" class="img-fluid" />
   <img src="../static/images/area_2019.png" alt="" class="img-fluid" />
 </div>
 <div class="row mt-2 mb-2 d-flex mx-auto">
   <div class="card col-6">
     <img src="../static/images/Cause_wise.png" alt="" class="img-fluid" />
   </div>
-  <div class="col-6"></div>
-</div>
-<div class="card row mt-2 mb-2 d-flex mx-auto">
-  <img src="../static/images/city.png" alt="" class="img-fluid" />
+  <div class="col-6">
+    <p class="lead">
+      The maximum number of accidents in the country occured due to over
+      speeding and dangerous/careless driving. Driving under the influence of
+      Drug/Alchohol is also another cause affecting the number of accidents. A
+      further analysis was carried out on this factor to get a better insight.
+    </p>
+  </div>
 </div>
 <div class="card row mt-2 mb-2 mx-auto">
+  <p class="lead">
+    Below figures shows that highest number of accidents due to drinking and
+    driving was reported from Uttar pradesh in the States category and from
+    Delhi in Union Territory category. Accidents in UP due to this factor has
+    only increased over 3 years. Andhra Pradesh shows very good improvement and
+    the number of accident cases due to drinking and driving has reduced
+    considerably.
+  </p>
   <img src="../static/images/drunk.png" alt="" class="img-fluid" />
 </div>
 <div class="card row mt-2 mb-2 d-flex mx-auto">
@@ -44,36 +42,64 @@ dataset_info %}
   />
 </div>
 <div class="card row mt-2 mb-2 d-flex mx-auto">
+  <p class="lead">
+    Data shows that two-wheelers has caused highest number of accidents in the
+    country and it has only increased over 3 years.
+  </p>
   <img src="../static/images/Mode_combined.png" alt="" class="img-fluid" />
 </div>
 <div class="card row mt-2 mb-2 d-flex mx-auto">
+  <p class="lead">
+    State wise analysis of data shows that Uttar Pradesh reported the highest
+    accident deaths in the country and among the union territories Delhi
+    reported highest death count. Among the cities in the country Delhi always
+    topped the list in the number of road accident deaths.
+  </p>
   <img
     src="../static/images/States with Highest Death Rate-Yearly Analysis.png"
     alt=""
     class="img-fluid"
   />
-</div>
-<div class="card row mt-2 mb-2 d-flex mx-auto">
-  <img src="../static/images/time_of_occurence.png" alt="" class="img-fluid" />
-</div>
-<div class="card row mt-2 mb-2 d-flex mx-auto">
-  <img src="../static/images/two_wheel_ut.png" alt="" class="img-fluid" />
-</div>
-<div class="card row mt-2 mb-2 d-flex mx-auto">
-  <img src="../static/images/two_wheel_states.png" alt="" class="img-fluid" />
-</div>
-
-<div class="card row mt-2 mb-2 d-flex mx-auto">
   <img
     src="../static/images/UTs with Highest Death Rate-Yearly Analysis.png"
     alt=""
     class="img-fluid"
   />
+  <img src="../static/images/city.png" alt="" class="img-fluid" />
 </div>
 <div class="card row mt-2 mb-2 d-flex mx-auto">
+  <p class="lead">
+    Time of occurence data shows that maximum number of accidents in the country
+    were reported between 6:00 PM and 9:00 PM.
+  </p>
+  <img src="../static/images/time_of_occurence.png" alt="" class="img-fluid" />
+</div>
+<div class="card row mt-2 mb-2 d-flex mx-auto">
+  <p class="lead">
+    Highest number of two-wheeler accidents were reported from Uttar Pradesh in
+    the States category and from Delhi in the UT Category
+  </p>
+  <img src="../static/images/two_wheel_ut.png" alt="" class="img-fluid" />
+</div>
+<div class="card row mt-2 mb-2 d-flex mx-auto">
+  <img src="../static/images/two_wheel_states.png" alt="" class="img-fluid" />
+</div>
+<div class="card row mt-2 mb-2 d-flex mx-auto">
+  <p class="lead">
+    Below graph clearly shows that the deaths due to road accidents has only
+    increased in India from 2017-2019. Studies states that each year, about
+    three to five percent of the country’s GDP was invested in road accidents.
+    Notably, while India has about one percent of the world’s vehicle
+    population, it also accounted for about six percent of the global road
+    traffic incidents.
+  </p>
   <img src="../static/images/YearVsDeathCount.png" alt="" class="img-fluid" />
 </div>
 <div class="card row mt-2 mb-2 d-flex mx-auto">
+  <p class="lead">
+    Data also shows that the majority of the adult victims from the fatal road
+    accidents are Males.
+  </p>
   <img
     src="../static/images/YearVsDeathCountBasedOnGender.png"
     alt=""

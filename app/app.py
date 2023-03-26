@@ -20,6 +20,11 @@ time_3_yrs=pd.read_csv("app/Datasets/Time of Occurrence-3 years.xls")
 
 data.main(Y2019_death_data,Y2018_death_data,Y2017_death_data,drunk_data,Cause_2019,Cause_2018,Cause_2017,Mode_2019,Mode_2018,Mode_2017,two_wheel_combined,time_3_yrs)
 
+@bp.after_request
+def add_header(response):
+    response.cache_control.max_age = 0
+    return response
+
 @bp.route('/')
 def home():
     return render_template('home.html')
@@ -29,5 +34,5 @@ def analytics():
     return render_template('analytics.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,use_reloader=True)
 
