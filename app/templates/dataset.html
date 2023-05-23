@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block title %}Dataset{% endblock %} {% block main
+%}
+<h1 class="display-1">Datasets Used</h1>
+{% for dataset in datasets %}
+<div class="card m-1">
+  <div class="card-body">
+    <h5 class="card-title">{{ dataset }}</h5>
+  </div>
+</div>
+{% endfor %} {% endblock %}

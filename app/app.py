@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, Blueprint
 from app import data
 import pandas as pd
+import numpy as np
 bp = Blueprint('app', __name__)
 import os
 
@@ -39,6 +40,10 @@ def home():
 @bp.route('/analytics')
 def analytics():
     return render_template('analytics.html')
+
+@bp.route('/dataset')
+def dataset():
+    return render_template('dataset.html',datasets=['accidents_raw','Y2019_death_data','Y2018_death_data','Y2017_death_data','drunk_data','Cause_2019','Cause_2018','Cause_2017','Mode_2019','Mode_2018','Mode_2017','two_wheel_combined','time_3_yrs'])
 
 if __name__ == '__main__':
     app.run(debug=False,host='0.0.0.0')
